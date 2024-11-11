@@ -1,19 +1,23 @@
-import { useQuery, useMutation} from "@tanstack/react-query";
+import { useQuery, useMutation, useQueryClient, } from "@tanstack/react-query";
 
 function App() {
+  const queryClient = useQueryClient();
   const { data, isLoading, error} = useQuery({
-    queryKey: ['todo'],
-    queryFn: () => fetch('https://jsonplaceholder.typicode.com/todos')
+    queryKey: ['users'],
+    queryFn: () => fetch('http://localhost:3000/users')
       .then((res) => res.json()),
   });
-const {isPending, isError, mutate}= useMutation({
-  mutationFn:(newPost)=>fetch('https://jsonplaceholder.typicode.com/posts',{
-    method:"POST",
-    body:JSON.stringify(newPost),
-    headers:{"Content-type": "application/json; charset=UTF-8"}
-  }).then((res) => res.json()),
-})
-
+  const { isPending, isError, mutate } = useMutation({
+    mutationFn: (newPost) =>
+      fetch('http://localhost:3000/users', {
+        method: "POST",
+        body: JSON.stringify(newPost),
+        headers: { "Content-type": "application/json; charset=UTF-8" }
+      }).then((res) => res.json()),
+    onSuccess: (newUser) => {
+      queryClient.setQueryData(['users'], (oldData) => [...(oldData || []), newUser]);
+    },
+  });
 if (isLoading || isPending){
   <div>Loading...</div>
 }
@@ -23,16 +27,16 @@ if(error || isError){
   return (
     <div>
       <button onClick={()=> mutate({ 
-    "userId": 500,
-    "id": 1,
-    "title": "hey my name is max",
-    "body": "quia et suscipitsuscipit recusandae consequuntur expedita et cumreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    "name": "sayali",
+    "country": "Azerbaijan",
+    "occupation":"frontend developer"
   })}>add</button>
-      {data?.map((todo) => (
+      {data?.map((users) => (
         <>
-        <h1 key={todo.id}>{todo.id}</h1>
-        <p>{todo.title}</p>
-        <h2>{todo.body}</h2>
+        <h1 key={users.id}>{users.id}</h1>
+        <p>{users.name}</p>
+        <h2>{users.country}</h2>
+        <h2>{users.occupation}</h2>
         </>
       ))}
     </div>

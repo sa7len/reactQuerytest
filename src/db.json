@@ -1,0 +1,112 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "country": "USA",
+      "occupation": "Software Engineer"
+    },
+    {
+      "id": "2",
+      "name": "Emma Smith",
+      "country": "UK",
+      "occupation": "Product Manager"
+    },
+    {
+      "id": "3",
+      "name": "Liam Johnson",
+      "country": "Canada",
+      "occupation": "Data Scientist"
+    },
+    {
+      "id": "4",
+      "name": "Olivia Brown",
+      "country": "Australia",
+      "occupation": "UX Designer"
+    },
+    {
+      "id": "5",
+      "name": "Noah Wilson",
+      "country": "Germany",
+      "occupation": "Marketing Specialist"
+    },
+    {
+      "id": "6",
+      "name": "Ava Garcia",
+      "country": "Spain",
+      "occupation": "Financial Analyst"
+    },
+    {
+      "id": "7",
+      "name": "James Martinez",
+      "country": "Mexico",
+      "occupation": "Civil Engineer"
+    },
+    {
+      "id": "8",
+      "name": "Sophia Anderson",
+      "country": "France",
+      "occupation": "Translator"
+    },
+    {
+      "id": "9",
+      "name": "William Thomas",
+      "country": "Italy",
+      "occupation": "Architect"
+    },
+    {
+      "id": "10",
+      "name": "Isabella Lee",
+      "country": "South Korea",
+      "occupation": "Doctor"
+    },
+    {
+      "id": "11",
+      "name": "Lucas Gonzalez",
+      "country": "Argentina",
+      "occupation": "Graphic Designer"
+    },
+    {
+      "id": "12",
+      "name": "Mia Hernandez",
+      "country": "Brazil",
+      "occupation": "Chef"
+    },
+    {
+      "id": "13",
+      "name": "Benjamin Hall",
+      "country": "New Zealand",
+      "occupation": "Teacher"
+    },
+    {
+      "id": "14",
+      "name": "Amelia Lopez",
+      "country": "Chile",
+      "occupation": "Journalist"
+    },
+    {
+      "id": "15",
+      "name": "Ethan Scott",
+      "country": "Japan",
+      "occupation": "Photographer"
+    },
+    {
+      "id": 1,
+      "userId": 500,
+      "title": "hey my name is max",
+      "body": "quia et suscipitsuscipit recusandae consequuntur expedita et cumreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    },
+    {
+      "id": 1,
+      "name": "sayali",
+      "country": "Azerbaijan",
+      "occupation": "frontend developer"
+    },
+    {
+      "id": "7dd4",
+      "name": "sayali",
+      "country": "Azerbaijan",
+      "occupation": "frontend developer"
+    }
+  ]
+}
